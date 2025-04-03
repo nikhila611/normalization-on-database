@@ -1,41 +1,43 @@
+# 🧮 Database Normalization – SQL Concepts
+
+This repository contains an `.xlsx` file and a visual reference for **database normalization** concepts (1NF to BCNF).
 
 ---
 
-### 📁 `normalization-on-database/README.md`
+## 📊 Normalization Diagram
 
-```markdown
-# 🧮 Database Normalization Practice
-
-This repository contains SQL examples and notes for **database normalization** concepts — from 1NF to BCNF. It helps in understanding how to structure relational databases effectively to eliminate redundancy and ensure integrity.
+![Normalization Diagram](normalization-diagram.png)
 
 ---
 
-## 📚 Concepts Included
+## 📘 What is Normalization?
 
-- First Normal Form (1NF)
-- Second Normal Form (2NF)
-- Third Normal Form (3NF)
-- Boyce-Codd Normal Form (BCNF)
-- Functional Dependencies
+Normalization is a technique to design relational databases by minimizing redundancy and ensuring data integrity. It breaks down large, complex tables into simpler, related ones.
 
 ---
 
-## 🛠 Tools Used
+## 🔁 Normal Forms Summary
 
-- MySQL / PostgreSQL (any relational DB)
-- SQL scripts
+### 1️⃣ First Normal Form (1NF)
+- Atomic values only (no arrays or multi-valued columns)
+- Remove repeating groups
+
+### 2️⃣ Second Normal Form (2NF)
+- Must be in 1NF
+- No partial dependency (every non-key column depends on the whole primary key)
+
+### 3️⃣ Third Normal Form (3NF)
+- Must be in 2NF
+- No transitive dependency (non-key should not depend on another non-key)
+
+### 🧠 BCNF (Boyce-Codd Normal Form)
+- Must be in 3NF
+- Every determinant must be a candidate key (even stricter)
 
 ---
 
-## 🚀 How to Use
+## 💾 File Included
 
-1. Open your SQL database client (e.g., MySQL Workbench, DBeaver).
-2. Run the `.sql` files provided in order.
-3. Observe the transitions between normalization levels.
+- `normalization-example.xlsx` — Sample tables and schema transformations for normalization practice.
 
 ---
-
-## 🧠 Purpose
-
-Created for learning and practicing relational database design techniques.
-
